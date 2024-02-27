@@ -4,6 +4,8 @@ My ADHD Reader is a browser extension for Chrome and Firefox that manipulates we
 
 Currently, only Wikipedia pages are targeted (only tested on Wikipedia so far) but more flexibility will be added in the future.
 
+---
+
 ## Install the dependencies
 
 ```bash
@@ -12,13 +14,13 @@ yarn
 npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+## Start the app in development mode
 
 ```bash
 yarn start
 ```
 
-### Lint the files
+## Lint the files
 
 ```bash
 yarn lint
@@ -26,7 +28,7 @@ yarn lint
 npm run lint
 ```
 
-### Format the files
+## Format the files
 
 ```bash
 yarn format
@@ -34,20 +36,16 @@ yarn format
 npm run format
 ```
 
-### Build the app for production
+## Build the app for production
 
 ```bash
 yarn build
 ```
 
-### Add the extension to Chrome or Firefox
+## Add the extension to Chrome or Firefox
 
-_Build the project first_
+### _Build the project first_
 
-- Navigate to Chrome>Preferences>Extensions
+- Navigate to Chrome > Preferences > Extensions
 - Click 'Load Unpacked' at the top
-- Navigate to the dist>bex folder in the MyADHDViewed directory
-
-### Customize the configuration
-
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+- Navigate to the dist > bex folder in the MyADHDViewed directory
