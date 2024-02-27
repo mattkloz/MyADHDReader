@@ -1,5 +1,7 @@
 # MyADHDReader
 
+My ADHD Reader is a browser extension for Chrome and Firefox that manipulates website text so that it is easier for users with ADHD to consume the content. The extension replaces text sections with modified text that includes increased font size, letter spacing and line spacing as well as random bold text to held hold attention.
+
 ## Install the dependencies
 
 ```bash
