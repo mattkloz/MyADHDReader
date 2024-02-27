@@ -38,6 +38,7 @@ function makeNewWords(words: string[]): string[] {
 }
 
 export default function siftPage() {
+  // only run this code on wikipedia (for now)
   if (window.location.hostname !== 'en.wikipedia.org') return;
   const paragraphs = document.querySelectorAll('p') as NodeListOf<HTMLParagraphElement>;
   paragraphs.forEach((p) => {
