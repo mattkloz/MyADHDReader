@@ -4,11 +4,9 @@ My ADHD Reader is a browser extension for Chrome and Firefox that manipulates we
 
 Currently, only Wikipedia pages are targeted (only tested on Wikipedia so far) but more flexibility will be added in the future.
 
-<img width="778" alt="Before" src="https://github.com/mattkloz/MyADHDReader/assets/12042150/1bd91e95-92a3-4fa1-8fed-ff4077505098">
-### Before
+<img width="598" alt="Before" src="https://github.com/mattkloz/MyADHDReader/assets/12042150/1bd91e95-92a3-4fa1-8fed-ff4077505098">
 
-<img width="778" alt="After" src="https://github.com/mattkloz/MyADHDReader/assets/12042150/7a98c8d9-5b28-47ef-ae3a-c69b441c7161">
-### After
+<img width="598" alt="After" src="https://github.com/mattkloz/MyADHDReader/assets/12042150/7a98c8d9-5b28-47ef-ae3a-c69b441c7161">
 
 
 
