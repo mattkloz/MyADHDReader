@@ -1,6 +1,6 @@
 {
-  "name": "adhd-viewer",
-  "version": "0.0.1",
+  "name": "my-adhd-reader",
+  "version": "1.0.1",
   "description": "A text modifier browser extension for people with ADHD",
   "productName": "MyADHDReader",
   "author": "Mattkloz <mjklosinski@gmail.com>",

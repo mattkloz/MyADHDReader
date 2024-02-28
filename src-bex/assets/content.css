@@ -1,5 +1,6 @@
 /* Global CSS used within your BEX. This is not preprocessed so this has to be pure CSS. */
 
-.blah {
-  color: #434343;
+.adhd-reader-str {
+  font-weight: 700;
+  color: #000;
 }

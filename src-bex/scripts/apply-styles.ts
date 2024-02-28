@@ -1,16 +1,22 @@
+const fontSize = '1.15rem';
+const letterSpacing = '1.3px';
+const lineHeight = '1.75';
+const fontWeight = '200';
+const color = '#434343';
+
+// get a random integer between min and max
 function getRandomInt(max: number, min: number) {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);
-  // Create a random number between the min and max
   return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 }
 
 function paragraphStyle(p: HTMLParagraphElement) {
-  p.style.fontSize = '1.15rem';
-  p.style.letterSpacing = '1.3px';
-  p.style.lineHeight = '1.75';
-  p.style.fontWeight = '200';
-  p.style.color = '#434343';
+  p.style.fontSize = fontSize;
+  p.style.letterSpacing = letterSpacing
+  p.style.lineHeight = lineHeight;
+  p.style.fontWeight = fontWeight;
+  p.style.color = color;
 }
 
 function makeNewWords(words: string[]): string[] {
@@ -29,7 +35,8 @@ function makeNewWords(words: string[]): string[] {
     }
     const splitWord = word.slice(0, splitAt);
     // create the new word with the split part wrapped in a span to add styling
-    const replaced = `<span class="replaced-str" style="font-weight: 700; color: #000;">${splitWord}</span>`;
+    const replaced = `<span class="adhd-reader-str">${splitWord}</span>`;
+    // update the skipCount to a new random number
     skipCount = skipCount + getRandomInt(6, 2);
     // return the word with the split part replaced
     return word.replace(splitWord, replaced);
@@ -37,9 +44,7 @@ function makeNewWords(words: string[]): string[] {
   return newWords;
 }
 
-export default function siftPage() {
-  // only run this code on wikipedia (for now)
-  if (window.location.hostname !== 'en.wikipedia.org') return;
+export default function applyStyles() {
   const paragraphs = document.querySelectorAll('p') as NodeListOf<HTMLParagraphElement>;
   paragraphs.forEach((p) => {
     // if the paragraph is too short, skip it
