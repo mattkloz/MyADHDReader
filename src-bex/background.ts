@@ -18,6 +18,7 @@ declare module '@quasar/app-vite' {
     /* eslint-disable @typescript-eslint/no-explicit-any */
     log: [{ message: string; data?: any[] }, never];
     getTime: [never, number];
+    setStyles: [any, any];
 
     'storage.get': [{ key: string | null }, any];
     'storage.set': [{ key: string; value: any }, any];
@@ -30,6 +31,12 @@ export default bexBackground((bridge /* , allActiveConnections */) => {
   bridge.on('log', ({ data, respond }) => {
     console.log(`[BEX] ${data.message}`, ...(data.data || []));
     respond();
+  });
+
+  bridge.on('setStyles', ({ data, respond }) => {
+    chrome.storage.local.set({ styleOptions: data }, () => {
+      respond("done!");
+    });
   });
 
   bridge.on('getTime', ({ respond }) => {

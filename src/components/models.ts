@@ -1,8 +1,7 @@
-export interface Todo {
-  id: number;
-  content: string;
-}
-
-export interface Meta {
-  totalCount: number;
+export interface IStyleOptions {
+  paragraphFontSize: number;
+  paragraphLetterSpacing: number;
+  paragraphLineHeight: number;
+  paragraphFontWeight: number;
+  readerFontWeight: number;
 }

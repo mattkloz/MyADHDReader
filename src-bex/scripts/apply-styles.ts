@@ -1,8 +1,12 @@
-const fontSize = '1.15rem';
-const letterSpacing = '1.3px';
-const lineHeight = '1.75';
-const fontWeight = '200';
+import { IStyleOptions } from '../../src/components/models';
+
+let fontSize = '1.15rem';
+let letterSpacing = '1.3px';
+let lineHeight = '1.75';
+let fontWeight = '200';
 const color = '#434343';
+let readerFontWeight = '700';
+
 
 // get a random integer between min and max
 function getRandomInt(max: number, min: number) {
@@ -35,7 +39,7 @@ function makeNewWords(words: string[]): string[] {
     }
     const splitWord = word.slice(0, splitAt);
     // create the new word with the split part wrapped in a span to add styling
-    const replaced = `<span class="adhd-reader-str">${splitWord}</span>`;
+    const replaced = `<span class="adhd-reader-str" style="font-weight: ${readerFontWeight};">${splitWord}</span>`;
     // update the skipCount to a new random number
     skipCount = skipCount + getRandomInt(6, 2);
     // return the word with the split part replaced
@@ -44,7 +48,12 @@ function makeNewWords(words: string[]): string[] {
   return newWords;
 }
 
-export default function applyStyles() {
+export default function applyStyles(data: IStyleOptions) {
+  fontSize = `${data.paragraphFontSize}rem`;
+  letterSpacing = `${data.paragraphLetterSpacing}px`;
+  lineHeight = `${data.paragraphLineHeight}rem`;
+  fontWeight = `${data.paragraphFontWeight}`;
+  readerFontWeight = `${data.readerFontWeight}`;
   const paragraphs = document.querySelectorAll('p') as NodeListOf<HTMLParagraphElement>;
   paragraphs.forEach((p) => {
     // if the paragraph is too short, skip it
